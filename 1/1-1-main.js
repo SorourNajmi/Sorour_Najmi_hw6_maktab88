@@ -1,16 +1,22 @@
 function racingGame() {
-    let carCount = +prompt("Enter number of cars:");
+    const carCount = +prompt("Enter number of cars:");
     if (isNaN(carCount)) throw new Error("Not a number!")
     const cars = [];
-    function RaceCar(inputName, inputOrder) {
+    function RaceCar(inputName) {
         this.carName = inputName;
-        this.carOrder = inputOrder;
+        this.carOrder = null;
         this.carPosition = 0;
         this.inRace = true;
     }
-    for (let i = 0; i < carCount; i++) {
-        cars.push(new RaceCar(prompt(`Enter car name #${i + 1}:`),
-        Math.floor(Math.random() * 10**13)));
+    for (let index = 0; index < carCount; index++) {
+        cars.push(new RaceCar(prompt(`Enter car name #${index + 1}:`)));
+    }
+    for (let order = 1; order <= carCount; order++) {
+        const choices = cars.filter(function(car) {
+            return car.carOrder === null;
+        })
+        const selected = Math.floor(Math.random() * (carCount - order + 1));
+        choices[selected].carOrder = order;
     }
     cars.sort(function(a, b) {return a.carOrder - b.carOrder});
     const steps = []
@@ -29,28 +35,28 @@ function racingGame() {
                         winnerFlag = true;
                     }
                 }
-            }
-            for (let j = 0; j < i; j++) {
-                if (cars[j].inRace && cars[j].carPosition === cars[i].carPosition) {
-                    cars[j].carPosition = 0;
+                for (let j = 0; j < i; j++) {
+                    if (cars[j].inRace && cars[j].carPosition === cars[i].carPosition) {
+                        cars[j].carPosition = 0;
+                    }
                 }
             }
         }
-        let mapRoad = [];
-        mapRoad.length = 300;
-        mapRoad.fill('-');
+        const mapArray = [];
+        mapArray.length = 300;
+        mapArray.fill('-');
         cars.forEach(function(car) {
             if (car.inRace) {
-                mapRoad[car.carPosition] = car.carName;
+                mapArray[car.carPosition] = car.carName;
             }
         })
         let mapString = '';
-        for (let item of mapRoad) {
+        for (let item of mapArray) {
             mapString += item;
         }
         console.log(mapString);
-        endFlag = cars.every(function(element) {
-            return element.inRace === false;
+        endFlag = cars.every(function(car) {
+            return car.inRace === false;
         })
     }
     console.log(`winner: ${winner}`);
