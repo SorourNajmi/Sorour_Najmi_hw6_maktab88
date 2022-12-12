@@ -50,10 +50,7 @@ function racingGame() {
                 mapArray[car.carPosition] = car.carName;
             }
         })
-        let mapString = '';
-        for (let item of mapArray) {
-            mapString += item;
-        }
+        let mapString = mapArray.join('');
         console.log(mapString);
         endFlag = cars.every(function(car) {
             return car.inRace === false;

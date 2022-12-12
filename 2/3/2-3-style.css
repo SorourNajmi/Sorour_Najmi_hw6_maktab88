@@ -1,0 +1,70 @@
+body {
+    direction: rtl;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.main {
+    height: 100vh;
+    background-image: url(Earth_at_Night.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 440px;
+    height: 345px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+}
+form {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    row-gap: 18px;
+}
+h4 {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+button {
+    color: white;
+    width: 320px;
+    background-color: #28a745;
+    border: 1px solid #28a745;
+    border-radius: 4px;
+    padding: 7px;
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p {
+    color: white;
+    font-size: 1.1rem;
+}
+span.btn {
+    text-align: center;
+}
+a {
+    display: inline;
+    text-decoration: none;
+    font-weight: bolder;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #007bff;
+}
+input {
+    border: 1px solid white;
+    border-radius: 4px;
+    width: 320px;
+    padding: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, FontAwesome;
+    font-size: 1.1rem;
+}
