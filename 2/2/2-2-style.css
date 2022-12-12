@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+div.origin {
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+h2 {
+    font-size: 1.2rem;
+    color: rgb(91, 91, 91);
+    margin-top: 20px;
+    margin-bottom: 17px;
+}
+nav {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 4px;
+}
+nav button {
+    font-weight: bolder;
+    padding: 8px 12px;
+    color: #3179bd;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+button.main-btn {
+    color: white;
+    background-color: #3179bd;
+    border: 1px solid #2b6eac;
+}
+h1 {
+    font-size: 3.1rem;
+    text-align: center;
+    margin-bottom: 5px;
+    width: 530px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+}
+button.green {
+    font-size: 1.1rem;
+    background-color: #5fb65e;
+    color: white;
+    border: 1px solid #519a4f;
+    border-radius: 5px;
+    padding: 13px 18px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 15px;
+}
+section {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eeeeee;
+    padding: 60px 30px;
+}
+section p {
+    width: 490px;
+    text-align: center;
+    line-height: 1.55rem;
+    font-size: 1.13rem;
+    color: rgb(70, 70, 70);
+    margin-left: auto;
+    margin-right: auto;
+}
+h3 {
+    font-size: 1rem;
+    margin-bottom: 9px;
+}
+div.box {
+    width: 48.3%;
+
+}
+footer {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-start;
+}
+hr {
+    height: 1.6px;
+    border-width: 0px;
+    color: rgb(222, 222, 222);
+    background-color: rgb(210, 210, 210);
+}
+div.main p {
+    font-size: 0.9rem;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    padding: 40px 11px;
+    column-gap: 21px;
+}
