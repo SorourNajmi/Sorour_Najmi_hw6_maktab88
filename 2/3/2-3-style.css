@@ -9,7 +9,9 @@ body {
 }
 .main {
     height: 100vh;
-    background-image: url(Earth_at_Night.jpg);
+    background-image: url(Earth_at_Night2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
