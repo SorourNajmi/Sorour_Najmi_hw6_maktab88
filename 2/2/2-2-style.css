@@ -83,7 +83,13 @@ h3 {
 }
 div.box {
     width: 48.3%;
-
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    padding: 40px 11px;
+    column-gap: 21px;
 }
 footer {
     margin-top: 15px;
@@ -99,11 +105,4 @@ hr {
 }
 div.main p {
     font-size: 0.9rem;
-}
-.main {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 24px;
-    padding: 40px 11px;
-    column-gap: 21px;
 }
